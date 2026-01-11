@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimateSense Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="dashboard-container">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="header-content">
+
+            <!-- LEFT: App Title -->
+            <div class="logo-small">
+                <span class="logo-icon">🌍</span>
+                <span class="app-title">ClimateSense</span>
+            </div>
+
+            <!-- RIGHT: User + Actions -->
+            <div class="user-info">
+                <span id="usernameDisplay">{{ username }}</span>
+
+                <button id="leaderboardBtn" class="btn-secondary">
+                    🏆 Leaderboard
+                </button>
+
+                <button id="resetBtn" class="btn-secondary">
+                    New Assessment
+                </button>
+            </div>
+
+        </div>
+
+
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Progress Steps -->
+            <div class="progress-steps">
+                <div class="step" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Lifestyle Input</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Footprint Results</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">AI Analysis</div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Recommendations</div>
+                </div>
+                <div class="step" data-step="5">
+                    <div class="step-number">5</div>
+                    <div class="step-label">Challenge</div>
+                </div>
+                <div class="step" data-step="6">
+                    <div class="step-number">6</div>
+                    <div class="step-label">Chat Advisor</div>
+                </div>
+            </div>
+
+            <!-- Step 1: Lifestyle Input -->
+            <div id="step1" class="step-content active">
+                <h2>📝 Lifestyle Assessment</h2>
+                <p class="step-description">Help us understand your lifestyle to estimate your carbon footprint.</p>
+                
+                <form id="lifestyleForm" class="lifestyle-form">
+                    <div class="form-grid">
+                        <div class="form-section">
+                            <h3>Transportation</h3>
+                            <div class="form-group">
+                                <label>Primary Transport Mode</label>
+                                <select name="transport_mode" required>
+                                    <option value="">Select...</option>
+                                    <option value="Car">Car</option>
+                                    <option value="Public">Public Transport</option>
+                                    <option value="Bike">Bike</option>
+                                    <option value="EV">Electric Vehicle</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Monthly Vehicle Distance</label>
+                                <select name="vehicle_distance" required>
+                                    <option value="">Select...</option>
+                                    <option value="Low">Low (&lt;500km)</option>
+                                    <option value="Medium">Medium (500-1500km)</option>
+                                    <option value="High">High (&gt;1500km)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Energy & Utilities</h3>
+                            <div class="form-group">
+                                <label>Electricity Usage</label>
+                                <select name="electricity" required>
+                                    <option value="">Select...</option>
+                                    <option value="Low">Low</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="High">High</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Daily Screen/Device Usage</label>
+                                <select name="device_usage" required>
+                                    <option value="">Select...</option>
+                                    <option value="Low">Low (&lt;4h)</option>
+                                    <option value="Medium">Medium (4-8h)</option>
+                                    <option value="High">High (&gt;8h)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Lifestyle Choices</h3>
+                            <div class="form-group">
+                                <label>Diet Type</label>
+                                <select name="diet" required>
+                                    <option value="">Select...</option>
+                                    <option value="Veg">Vegetarian</option>
+                                    <option value="Mixed">Mixed</option>
+                                    <option value="Non-Veg">Non-Vegetarian</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Air Travel Frequency</label>
+                                <select name="air_travel" required>
+                                    <option value="">Select...</option>
+                                    <option value="Never">Never</option>
+                                    <option value="Rare">Rare (1-2/year)</option>
+                                    <option value="Frequent">Frequent (3+/year)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Waste Management</h3>
+                            <div class="form-group">
+                                <label>Waste Generation</label>
+                                <select name="waste" required>
+                                    <option value="">Select...</option>
+                                    <option value="Low">Low</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="High">High</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Recycling Habits</label>
+                                <select name="recycling" required>
+                                    <option value="">Select...</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Calculate My Footprint
+                    </button>
+                </form>
+            </div>
+
+            <!-- Step 2: Footprint Results -->
+            <div id="step2" class="step-content">
+                <h2>📊 Your Carbon Footprint Estimate</h2>
+                <div id="footprintResults"></div>
+                <button id="getAnalysisBtn" class="btn-primary" style="display: none;">
+                    🤖 Get AI Analysis
+                </button>
+                <div id="aiStatusMessage" class="ai-status-message"></div>
+
+            </div>
+
+            <!-- Step 3: AI Analysis -->
+            <div id="step3" class="step-content">
+                <h2>🤖 AI Impact Analysis</h2>
+                <div id="analysisResults" class="analysis-content"></div>
+
+                <button id="getRecommendationsBtn" class="btn-primary" style="display: none;">
+                    🎯 Get Personalized Recommendations
+                </button>
+            <div id="aiStatusMessage" class="ai-status-message"></div>
+
+            </div>
+
+            <!-- Step 4: Recommendations -->
+            <div id="step4" class="step-content">
+                <h2>🎯 Personalized Recommendations</h2>
+                <div id="recommendationsResults" class="recommendations-content"></div>
+
+                <button id="getChallengeBtn" class="btn-primary" style="display: none;">
+                    💪 Get My One-Change Challenge
+                </button>
+                <div id="aiStatusMessage" class="ai-status-message"></div>
+
+            </div>
+
+            <!-- Step 5: Challenge -->
+<div id="step5" class="step-content">
+    <h2>💪 Your One-Change Challenge</h2>
+
+    <!-- Challenge details will be dynamically inserted here -->
+    <div id="challengeResults" class="challenge-content"></div>
+
+    <!-- Action buttons -->
+    <div class="challenge-actions">
+
+        <!-- Accept Challenge -->
+        <button id="acceptChallengeBtn" class="btn-success" style="display: none;" onclick="acceptChallenge();">
+            ✅ Accept This Challenge
+        </button>
+
+        <!-- Get New Challenge -->
+        <button id="newChallengeBtn" class="btn-secondary" style="display: none;" onclick="getNewChallenge();">
+            🔄 Get Different Challenge
+        </button>
+
+        <!-- Download Challenge Card -->
+        <button id="downloadCardBtn" class="btn-primary" style="display: none;">
+            📷 Download My Challenge Card
+        </button>
+    </div>
+
+    <!-- Chat with AI Advisor -->
+    <button id="startChatBtn" class="btn-primary" style="display: none;">
+        💬 Chat with Climate Advisor
+    </button>
+</div>
+
+            <!-- Step 6: Chat -->
+            <div id="step6" class="step-content">
+                <h2>💬 Climate Advisor Chat</h2>
+                <p class="step-description">Ask me anything about your carbon footprint, climate action, or sustainability!</p>
+                
+                <div id="chatContainer" class="chat-container">
+                    <div id="chatMessages" class="chat-messages">
+                        <div class="chat-message assistant">
+                            <div class="message-content">
+                                👋 Hi! I'm your Climate Advisor. Ask me questions about your footprint, climate action, or sustainability!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input 
+                            type="text" 
+                            id="chatInput" 
+                            placeholder="Ask a question..."
+                            class="chat-input"
+                        >
+                        <div id="aiStatusMessage" class="ai-status-message"></div>
+
+                        <button id="sendChatBtn" class="btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+    <!-- Leaderboard Side Panel -->
+<div id="leaderboardPanel" class="leaderboard-panel hidden">
+    <div class="leaderboard-header">
+        <h3>🏆 Climate Heroes</h3>
+        <button onclick="toggleLeaderboard()">✖</button>
+    </div>
+
+    <div id="leaderboardContainer">
+        <!-- Filled dynamically -->
+    </div>
+
+</div>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+</html>
