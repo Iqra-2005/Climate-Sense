@@ -28,7 +28,7 @@ climate_sense/
 │   └── prompts.py           # Centralized prompt templates
 ├── utils/
 │   └── helpers.py           # Utility functions
-└── app.py                   # Main Streamlit application
+└── app.py                   # Flask routes
 ```
 
 ## 🚀 Quick Start
