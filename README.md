@@ -53,13 +53,12 @@ climate_sense/
 
 3. **Set up environment variables**
    ```bash
-   cp .env.example .env
-   # Edit .env and add your GEMINI_API_KEY
+   # Create .env file and add your GEMINI_API_KEY
    ```
 
 4. **Run the application**
    ```bash
-   streamlit run app.py
+     python app.py
    ```
 
 The app will open in your browser at `http://localhost:8501`
@@ -125,11 +124,11 @@ ClimateSense demonstrates **Agentic AI** through:
 
 ## 📊 Technical Stack
 
-- **Frontend**: Streamlit
+- **Frontend**: (HTML/CSS)
 - **Backend**: Python 3.8+
 - **LLM**: Google Gemini API
 - **Storage**: Session-based (Streamlit session_state)
-- **Deployment**: Render/Railway compatible
+- **Deployment**: Hugging Faces
 
 ## 🤝 Contributing
 
