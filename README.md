@@ -85,24 +85,6 @@ The app will open in your browser at `http://localhost:8501`
 - **Prompts**: Edit `config/prompts.py` to customize AI behavior
 - **UI**: Modify `app.py` to change the user interface
 
-## 🚢 Deployment
-
-### Deploy on Render
-
-1. Create a new Web Service on Render
-2. Connect your GitHub repository
-3. Set build command: `pip install -r requirements.txt`
-4. Set start command: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
-5. Add environment variable: `GEMINI_API_KEY=your_key`
-6. Deploy!
-
-### Deploy on Railway
-
-1. Create a new project on Railway
-2. Connect your GitHub repository
-3. Railway will auto-detect Python
-4. Add environment variable: `GEMINI_API_KEY=your_key`
-5. Deploy!
 
 ## 🎓 Design Principles
 
