@@ -6,11 +6,11 @@ ClimateSense is a production-ready web application that goes beyond simple carbo
 
 ## 🎯 Core Features
 
-- ** Transparent Carbon Estimation**: Rule-based, explainable footprint calculation
-- ** AI-Powered Analysis**: LLM reasoning to identify top emission drivers
-- ** Prioritized Recommendations**: Personalized actions ranked by impact vs feasibility
-- ** One-Change Challenge**: Weekly, realistic behavior change goals
-- ** Climate Advisor Chat**: Context-aware conversational guidance
+-  ** Transparent Carbon Estimation** : Rule-based, explainable footprint calculation
+-  ** AI-Powered Analysis** : LLM reasoning to identify top emission drivers
+-  ** Prioritized Recommendations** : Personalized actions ranked by impact vs feasibility
+-  ** One-Change Challenge** : Weekly, realistic behavior change goals
+-  ** Climate Advisor Chat** : Context-aware conversational guidance
 
 ##  Architecture
 
