@@ -117,10 +117,10 @@ ClimateSense demonstrates **Agentic AI** through:
 
 ##  Technical Stack
 
-- **Frontend**: (HTML/CSS)
-- **Backend**: Python 3.8+
+- **Frontend**: HTML, CSS , Javascript
+- **Backend**: Python 3.8+ , Flask
 - **LLM**: Google Gemini API
-- **Storage**: Session-based (Streamlit session_state)
+- **Databse** : Supabase
 - **Deployment**: Hugging Faces
 
 ---
