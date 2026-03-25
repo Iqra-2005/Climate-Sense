@@ -2,6 +2,8 @@
 
 **An Agentic AI system aligned with UN SDG 13: Climate Action**
 
+---
+
 ClimateSense is a production-ready web application that goes beyond simple carbon footprint calculators. It uses **Agentic AI** to reason, prioritize, and guide users toward meaningful climate action.
 
 ## 🎯 Core Features
@@ -12,7 +14,9 @@ ClimateSense is a production-ready web application that goes beyond simple carbo
 -  **One-Change Challenge** : Weekly, realistic behavior change goals
 -  **Climate Advisor Chat** : Context-aware conversational guidance
 
-##  Architecture
+---
+
+## 🗃️ Architecture
 
 ### Modular Agent-Based Design
 
@@ -30,8 +34,9 @@ climate_sense/
 │   └── helpers.py           # Utility functions
 └── app.py                   # Flask routes
 ```
+---
 
-##  Quick Start
+## ✔️ Quick Start
 
 ### Prerequisites
 
@@ -62,8 +67,9 @@ climate_sense/
    ```
 
 The app will open in your browser at `http://localhost:8501`
+---
 
-##  Usage Flow
+## 🪴 Usage Flow
 
 1. **Introduction**: Learn about ClimateSense and SDG 13
 2. **Lifestyle Input**: Fill out the questionnaire about your lifestyle
@@ -73,7 +79,9 @@ The app will open in your browser at `http://localhost:8501`
 6. **One-Change Challenge**: Accept a weekly challenge to reduce your footprint
 7. **Climate Advisor Chat**: Ask follow-up questions and get guidance
 
-##  Configuration
+---
+
+## ⚙️ Configuration
 
 ### Environment Variables
 
@@ -85,8 +93,9 @@ The app will open in your browser at `http://localhost:8501`
 - **Prompts**: Edit `config/prompts.py` to customize AI behavior
 - **UI**: Modify `app.py` to change the user interface
 
+---
 
-##  Design Principles
+## 📑 Design Principles
 
 ### Agentic AI
 
@@ -104,6 +113,8 @@ ClimateSense demonstrates **Agentic AI** through:
 - ✅ Clear disclaimers about estimates
 - ✅ No fear-based messaging
 
+---
+
 ##  Technical Stack
 
 - **Frontend**: (HTML/CSS)
@@ -112,7 +123,9 @@ ClimateSense demonstrates **Agentic AI** through:
 - **Storage**: Session-based (Streamlit session_state)
 - **Deployment**: Hugging Faces
 
-##  Contributing
+---
+
+## 🤝 Contributing
 
 This is a portfolio-ready project demonstrating:
 - Agentic AI principles
@@ -120,16 +133,19 @@ This is a portfolio-ready project demonstrating:
 - Production-ready code structure
 - UN SDG alignment
 
-##  License
+---
+
+## 📝 License
 
 This project is built for educational and portfolio purposes.
 
-##  Acknowledgments
+---
+
+## 📜 Acknowledgments
 
 - Inspired by Kaggle "Individual Carbon Footprint Calculation" dataset
-- Aligned with UN SDG 13: Climate Action
+- Aligned with United Nations Sustainable Development Goal (UN SDG 13: Climate Action)
 - Built with ethical AI principles
 
 ---
 
-**Built with ❤️ for Climate Action**
