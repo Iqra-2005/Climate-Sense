@@ -65,8 +65,8 @@ climate_sense/
    ```bash
      python app.py
    ```
+   The app will open in your browser at `http://localhost:8501`
 
-The app will open in your browser at `http://localhost:8501`
 ---
 
 ## 🪴 Usage Flow
