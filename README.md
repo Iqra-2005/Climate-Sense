@@ -1,4 +1,4 @@
-# 🌍 ClimateSense - AI Climate Action & Carbon Footprint Reduction Agent
+#  ClimateSense - AI Climate Action & Carbon Footprint Reduction Agent
 
 **An Agentic AI system aligned with UN SDG 13: Climate Action**
 
@@ -6,7 +6,7 @@
 
 ClimateSense is a production-ready web application that goes beyond simple carbon footprint calculators. It uses **Agentic AI** to reason, prioritize, and guide users toward meaningful climate action.
 
-## 🎯 Core Features
+##  Core Features
 
 -  **Transparent Carbon Estimation** : Rule-based, explainable footprint calculation
 -  **AI-Powered Analysis** : LLM reasoning to identify top emission drivers
@@ -16,7 +16,7 @@ ClimateSense is a production-ready web application that goes beyond simple carbo
 
 ---
 
-## 🗃️ Architecture
+##  Architecture
 
 ### Modular Agent-Based Design
 
@@ -36,7 +36,7 @@ climate_sense/
 ```
 ---
 
-## ✔️ Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -69,7 +69,7 @@ climate_sense/
 
 ---
 
-## 🪴 Usage Flow
+##  Usage Flow
 
 1. **Introduction**: Learn about ClimateSense and SDG 13
 2. **Lifestyle Input**: Fill out the questionnaire about your lifestyle
@@ -81,7 +81,7 @@ climate_sense/
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Environment Variables
 
@@ -95,7 +95,7 @@ climate_sense/
 
 ---
 
-## 📑 Design Principles
+##  Design Principles
 
 ### Agentic AI
 
@@ -107,11 +107,11 @@ ClimateSense demonstrates **Agentic AI** through:
 
 ### Ethical AI
 
-- ✅ Encouraging, non-judgmental language
-- ✅ Realistic, achievable recommendations
-- ✅ Privacy-first (session-based storage)
-- ✅ Clear disclaimers about estimates
-- ✅ No fear-based messaging
+-  Encouraging, non-judgmental language
+-  Realistic, achievable recommendations
+-  Privacy-first (session-based storage)
+-  Clear disclaimers about estimates
+-  No fear-based messaging
 
 ---
 
@@ -125,7 +125,7 @@ ClimateSense demonstrates **Agentic AI** through:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 This is a portfolio-ready project demonstrating:
 - Agentic AI principles
@@ -135,13 +135,13 @@ This is a portfolio-ready project demonstrating:
 
 ---
 
-## 📝 License
+##  License
 
 This project is built for educational and portfolio purposes.
 
 ---
 
-## 📜 Acknowledgments
+##  Acknowledgments
 
 - Inspired by Kaggle "Individual Carbon Footprint Calculation" dataset
 - Aligned with United Nations Sustainable Development Goal (UN SDG 13: Climate Action)
